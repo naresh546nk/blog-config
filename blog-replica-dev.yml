@@ -24,7 +24,7 @@ spring:
           issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_3PQhzGhke
 user:
   replica:
-    url: http://user-replica/api/v1.0/blogsite/users/
+    url: http://user-replica:8001/api/v1.0/blogsite/users/
 
 axon:
   axonserver:
