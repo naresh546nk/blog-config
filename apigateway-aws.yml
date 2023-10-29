@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: apigateway
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+#api geteway is able to featch all the instances form discovery server.
+#spring.cloud.gateway.discovery.locator.enabled=true
+
