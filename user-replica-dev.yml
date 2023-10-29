@@ -1,0 +1,31 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: user-replica
+  data:
+    #    mongodb:
+    #      uri: mongodb+srv://nareshkumar546nk:Password@mongocluster.3khr6ur.mongodb.net/
+    #      database: blogReadDb
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+axon:
+  axonserver:
+    servers: axonserver:8124
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  #    service-url:
+  #      default-zone: http://host.docker.internal:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+#  spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect

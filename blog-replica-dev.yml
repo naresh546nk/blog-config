@@ -1,0 +1,40 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: blog-replica
+  data:
+  #    mongodb:
+  #      uri: mongodb+srv://nareshkumar546nk:Password@mongocluster.3khr6ur.mongodb.net/
+  #      port: 27017
+  #      host: localhost
+  #      database: blogReadDb
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_3PQhzGhke
+user:
+  replica:
+    url: http://user-replica/api/v1.0/blogsite/users/
+
+axon:
+  axonserver:
+    servers: axonserver:8124
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  #    service-url:
+  #      default-zone: http://host.docker.internal:8761/eureka/
+  instance:
+    prefer-ip-address: true
